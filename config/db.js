@@ -15,5 +15,7 @@ const connectDB = async () => {
         process.exit(1)
     }
 };
+mongoose.set("useFindAndModify", false);
+mongoose.set("useUnifiedTopology", true);
 
 module.exports = connectDB;
