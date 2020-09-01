@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://alep710:alep710@cluster0-lbxuy.mongodb.net/test?retryWrites=true&w=majority",
-  "jwtSecret": "secrettoken"
+  "jwtSecret": "secrettoken",
+  "githubClientId": "e736133f3af136444814",
+  "githubSecret": "ad29874873f4d0fdeb50756b999d4a7cf0fcb54c"
 }
