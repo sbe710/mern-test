@@ -12,7 +12,7 @@ const User = require("../../models/User");
 // @access Public
 router.get("/", auth, async (req, res) => {
     try {
-        const user = await User.findById(req.user.id).select("-password");
+        const user = await User.findById(req.user.id).select("-password"); // not sending a password
         res.json(user);
     } catch (err) {
         console.error(err.message);
