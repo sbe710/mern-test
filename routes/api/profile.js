@@ -7,6 +7,7 @@ const { check, validationResult } = require("express-validator");
 
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
+const Post = require("../../models/Post");
 
 // @route  GET api/profile/me
 // @desc   Get current user's profile
@@ -106,7 +107,6 @@ router.post("/",
 // @route  GET api/profile
 // @desc   Get all profiles
 // @access Public
-
 router.get("/",
     async (req, res) => {
         try {
@@ -122,15 +122,15 @@ router.get("/",
 // @route  DELETE api/profile
 // @desc   Delete profile, & user & posts
 // @access Private
-
 router.delete("/", auth,
     async (req, res) => {
         try {
+            // Remove user posts
+            await Post.deleteMany({ user: req.user.id });
             // Remove profile
             await Profile.findOneAndRemove({ user: req.user.id });
             // Remove user
             await User.findOneAndRemove({ _id: req.user.id });
-
 
             res.json({ msg: "User deleted" });
         } catch (err) {
@@ -142,7 +142,6 @@ router.delete("/", auth,
 // @route  GET api/profile/user/:user_id
 // @desc   Get profile by user ID
 // @access Public
-
 router.get("/user/:user_id",
     async (req, res) => {
         try {
@@ -162,7 +161,6 @@ router.get("/user/:user_id",
 // @route  PUT api/profile/experience
 // @desc   Add profile experience
 // @access Private
-
 router.put("/experience", [
     auth,
     [
@@ -211,7 +209,6 @@ router.put("/experience", [
 // @route  DELETE api/profile/experience/:exp_id
 // @desc   Delete experience from profile
 // @access Private
-
 router.delete("/experience/:exp_id", auth, async(req, res) => {
     try {
         const profile = await Profile.findOne({ user: req.user.id });
@@ -232,7 +229,6 @@ router.delete("/experience/:exp_id", auth, async(req, res) => {
 // @route  PUT api/profile/education
 // @desc   Add profile education
 // @access Private
-
 router.put("/education", [
     auth,
     [
@@ -282,7 +278,6 @@ router.put("/education", [
 // @route  DELETE api/profile/education/:edu_id
 // @desc   Delete education from profile
 // @access Private
-
 router.delete("/education/:edu_id", auth, async(req, res) => {
     try {
         const profile = await Profile.findOne({ user: req.user.id });
