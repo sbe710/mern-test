@@ -13,7 +13,9 @@ const ProfileItem = ({
 }) => {
     return (
         <div className="profile bg-light">
-            <img src={avatar} className="round-img"/>
+            <img src={avatar}
+                 className="round-img"
+                 alt="avatar" />
             <div>
                 <h2>{name}</h2>
                 <p>{status} {company && <span> at {company}</span>}</p>
@@ -33,6 +35,8 @@ const ProfileItem = ({
     );
 };
 
-ProfileItem.propTypes = {};
+ProfileItem.propTypes = {
+    profile: PropTypes.object.isRequired,
+};
 
 export default ProfileItem;

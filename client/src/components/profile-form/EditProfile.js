@@ -49,7 +49,7 @@ const EditProfile = ({
         setFormData(obj);
         setInitialFormData(obj)
         return () => console.log('clean edit profile effect');
-    }, [loading]); // when it loads it runs
+    }, [loading, getCurrentProfile]); // when it loads it runs
 
     useEffect(() => {
         toggleButtonDisabled(shallowEqual(formData, initialFormData));
