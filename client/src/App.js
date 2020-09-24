@@ -19,6 +19,7 @@ import store from './store';
 import setAuthToken from './utils/setAuthToken';
 import { loadUser } from './actions/auth';
 import './App.css';
+import Post from './components/post/Post';
 
 if (localStorage.getItem('token')) {
     setAuthToken(localStorage.getItem('token'))
@@ -48,6 +49,7 @@ const App = () => {
                             <PrivateRoute exact path='/add-experience' component={AddExperience} />
                             <PrivateRoute exact path='/add-education' component={AddEducation} />
                             <PrivateRoute exact path='/posts' component={Posts} />
+                            <PrivateRoute exact path='/posts/:id' component={Post} />
                         </Switch>
                     </section>
                     <Route />
