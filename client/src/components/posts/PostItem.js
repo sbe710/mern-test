@@ -25,7 +25,7 @@ const PostItem = ({
     <Fragment>
         <div className='post bg-white p-1 my-1'>
             <div>
-                <Link to={`/profile/${auth.user._id}`}>
+                <Link to={`/profile/${user}`}>
                     <img
                         className='round-img'
                         src={avatar}
