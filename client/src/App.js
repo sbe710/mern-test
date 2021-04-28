@@ -31,31 +31,67 @@ const App = () => {
     }, []);
 
     return (
-        <Provider store={store}>
-            <Router>
-                <Fragment>
-                    <Navbar />
-                    <Route exact path='/' component={Landing} />
-                    <section className="container">
-                        <Alert />
-                        <Switch>
-                            <Route exact path='/register' component={Register} />
-                            <Route exact path='/login' component={Login} />
-                            <Route exact path='/profiles' component={Profiles} />
-                            <Route exact path='/profile/:id' component={Profile} />
-                            <PrivateRoute exact path='/dashboard' component={Dashboard} />
-                            <PrivateRoute exact path='/create-profile' component={CreateProfile} />
-                            <PrivateRoute exact path='/edit-profile' component={EditProfile} />
-                            <PrivateRoute exact path='/add-experience' component={AddExperience} />
-                            <PrivateRoute exact path='/add-education' component={AddEducation} />
-                            <PrivateRoute exact path='/posts' component={Posts} />
-                            <PrivateRoute exact path='/posts/:id' component={Post} />
-                        </Switch>
-                    </section>
-                    <Route />
-                </Fragment>
-            </Router>
-        </Provider>
+        <div className="app">
+            <div className="header">
+                <div className="logo" />
+                <div className="nav">
+                    <div className="navItem">About</div>
+                    <div className="navItem">Products</div>
+                    <div className="navItem">Pricing</div>
+                    <div className="navItem">Blog</div>
+                </div>
+            </div>
+
+            <div className="main">
+                <div className="mainInfo">
+                    <div className="title">Dating app for couples and singles</div>
+                    <div className="secondaryText">
+                        Explore your own sexuality with 100+ sexual preferences. Here everyone openly shares their
+                        desires. Share yours.
+                    </div>
+                    <button className="button">Join Now</button>
+                </div>
+                <div className="mainImage" />
+            </div>
+
+            <div className="features">
+                <div className="title">Discover the key features</div>
+
+                <div className="cards">
+                    <div className="card">
+                        <div className="cardTitle">Flexible Configuration</div>
+
+                        <div className="cardText">Explore your own sexuality with 100+ sexual preferences</div>
+                    </div>
+
+                    <div className="card">
+                        <div className="cardTitle">Flexible Configuration</div>
+
+                        <div className="cardText">Explore your own sexuality with 100+ sexual preferences</div>
+                    </div>
+
+                    <div className="card">
+                        <div className="cardTitle">Flexible Configuration</div>
+
+                        <div className="cardText">Explore your own sexuality with 100+ sexual preferences</div>
+                    </div>
+
+                    <div className="card">
+                        <div className="cardTitle">Flexible Configuration</div>
+
+                        <div className="cardText">Explore your own sexuality with 100+ sexual preferences</div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="users">
+                <div className="title">What Our Clients Speak?</div>
+                <div className="secondaryText">We have been working with clients around the world</div>
+
+
+
+            </div>
+        </div>
     )}
 
 export default App;
