@@ -38,7 +38,7 @@ const App = () =>{
                 <div className="pageLimiter">
                     <div className="header">
                         <div className="logoWrapper">
-                            <span className="logo}" />
+                            <span className="logo" />
                             <span className="logoText">Cupido</span>
                         </div>
                         <div className="nav">
@@ -60,12 +60,12 @@ const App = () =>{
                             </div>
 
                             <Popover content={content} trigger='click' visible={formVisible}>
-                                <Button className="button}" size={'large'} onClick={() => setFormVisible(true)}>
+                                <Button className="button" size={'large'} onClick={() => setFormVisible(true)}>
                                     Join Now
                                 </Button>
                             </Popover>
                         </div>
-                        <div className="mainImage}" />
+                        <div className="mainImage" />
                     </div>
 
                     <div className="features">
@@ -180,14 +180,14 @@ const App = () =>{
                     <div className="installApp">
                         <div className="installAppLeft">
                             <div className="installAppTitle">Install the app few easy steps</div>
-                            <div className="installAppImage}" />
+                            <div className="installAppImage" />
                         </div>
 
                         <div className="installAppRight">
                             <div className="steps">
                                 <div className="stepActive">
                                     <div className="stepImage">
-                                        <img src='/images/01.png' className="stepImageInner}" />
+                                        <img src='/images/01.png' className="stepImageInner" />
                                     </div>
 
                                     <div className="stepInfo">
@@ -203,7 +203,7 @@ const App = () =>{
 
                                 <div className="step">
                                     <div className="stepImage">
-                                        <img src='/images/02.png' className="stepImageInner}" />
+                                        <img src='/images/02.png' className="stepImageInner" />
                                     </div>
 
                                     <div className="stepInfo">
@@ -218,7 +218,7 @@ const App = () =>{
 
                                 <div className="step">
                                     <div className="stepImage">
-                                        <img src='/images/03.png' className="stepImageInner}" />
+                                        <img src='/images/03.png' className="stepImageInner" />
                                     </div>
 
                                     <div className="stepInfo">
@@ -245,7 +245,7 @@ const App = () =>{
                         </div>
 
                         <Popover content={content} trigger='click' visible={formVisible}>
-                            <Button className="button}" size={'large'} onClick={() => setFormVisible(true)}>
+                            <Button className="button" size={'large'} onClick={() => setFormVisible(true)}>
                                 Join Now
                             </Button>
                         </Popover>
@@ -260,7 +260,7 @@ const App = () =>{
                 <div className="footer">
                     <div className="rights">© 2021 Cupido. All rights reserved</div>
                     <div className="logoWrapper">
-                        <span className="logo}" />
+                        <span className="logo" />
                         <span className="logoTextFooter">Cupido</span>
                     </div>
                     <div className="social">inst fb</div>
