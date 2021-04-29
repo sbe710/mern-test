@@ -74,6 +74,10 @@
   display: inline-flex;
 }
 
+.logoWrapepr._footer {
+  margin-left: -200px;
+}
+
 .logo {
   background-image: url('/images/Dark.png');
   height: 28px;

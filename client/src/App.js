@@ -259,7 +259,7 @@ const App = () =>{
 
                 <div className="footer">
                     <div className="rights">© 2021 Cupido. All rights reserved</div>
-                    <div className="logoWrapper">
+                    <div className="logoWrapper _footer">
                         <span className="logo" />
                         <span className="logoTextFooter">Cupido</span>
                     </div>
