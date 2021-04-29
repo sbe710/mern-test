@@ -1,15 +1,43 @@
 .app {
-  max-width: 1200px;
-  margin: 32px auto 0;
-  background: #fff;
-  color: #18191F;
+  color: #18191f;
+  position: relative;
 }
 
+.button {
+  background: #8c30f5 !important;
+  padding: 16px 54px;
+  height: 62px;
+  border-radius: 8px;
+}
+
+.button > span {
+  font-size: 20px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.ant-btn-lg {
+}
+
+.pageLimiter {
+  max-width: 1200px;
+  margin: 32px auto 0;
+}
 
 .header {
   display: flex;
   width: 100%;
   justify-content: space-between;
+}
+
+.mainBg {
+  background: url('/images/Background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  height: 817px;
+  width: 100%;
+  top: 0;
 }
 
 .main {
@@ -23,7 +51,7 @@
 
 .mainImage {
   flex: 1 1 auto;
-  background-image: url("/images/mainImage.png");
+  background-image: url('/images/mainImage.png');
   height: 400px;
   width: 524px;
 }
@@ -36,43 +64,70 @@
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-
-
 }
 
 .navItem + .navItem {
   margin-left: 32px;
+}
 
+.logoWrapper {
+  display: inline-flex;
 }
 
 .logo {
-  background-image: url("/images/Dark.png");
+  background-image: url('/images/Dark.png');
   height: 28px;
-  width: 100px
-;
+  width: 45px;
+}
+
+.logoText {
+  font-weight: 800;
+  font-size: 24px;
+}
+
+.logoTextFooter {
+  font-weight: 800;
+  font-size: 24px;
+  color: #ffffff;
 }
 
 .title {
   font-size: 64px;
   line-height: 68px;
-  color: #18191F;
+  color: #18191f;
+  text-align: center;
+}
+
+.mainTitle {
+  font-size: 64px;
+  line-height: 68px;
+  color: #18191f;
+  padding-bottom: 16px;
 }
 
 .secondaryText {
   font-size: 18px;
-  line-height: 32px
+  line-height: 32px;
+  text-align: center;
 }
 
-.button {
-  padding: 16px 54px;
-  font-size: 20px;
-  line-height: 30px;
-  background:#8C30F5 ;
+.secondaryTextMain {
+  font-size: 18px;
+  line-height: 32px;
+  padding-bottom: 31px;
 }
-
 
 .features {
-  padding: 150px 0;
+  padding: 300px 0 200px;
+}
+
+.featuresImage {
+  position: absolute;
+  width: 540px;
+  height: 540px;
+  background-image: url('/images/Circle.png');
+  right: 0;
+  z-index: -1;
 }
 
 .cards {
@@ -87,10 +142,11 @@
   border-radius: 8px;
   width: 255px;
   height: 277px;
+  background: #ffffff;
 }
 
 .card + .card {
-    margin-left: 30px;
+  margin-left: 30px;
 }
 
 .cardTitle {
@@ -110,4 +166,207 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 165px;
+
+  background: #f4f5f7;
+}
+
+.userCards {
+  display: flex;
+  padding-top: 40px;
+}
+
+.userCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userCard + .userCard {
+  margin-left: 30px;
+}
+
+.userComment {
+  background: #ffffff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  width: 350px;
+  height: 200px;
+
+  position: relative;
+}
+
+.userCommentWrapper {
+  padding-bottom: 41px;
+  position: relative;
+}
+
+.userCommentArrow {
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%) rotate(45deg);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+}
+
+.commentTitle {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.commentText {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.userAvatar {
+}
+
+.userName {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  padding-top: 8px;
+}
+
+.installApp {
+  display: flex;
+}
+
+.installAppLeft {
+  flex: 1 1 auto;
+  margin-right: 30px;
+}
+
+.installAppRight {
+  flex: 1 1 auto;
+}
+
+.installAppTitle {
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 64px;
+  padding-bottom: 22px;
+}
+
+.installAppImage {
+  background-image: url('/images/installApp.png');
+  width: 445px;
+  height: 525px;
+}
+
+.steps {
+  margin-top: 76px;
+}
+
+.stepActive {
+  display: flex;
+  padding: 48px 80px;
+  background: #8c30f5;
+  color: #ffffff;
+}
+
+.step {
+  display: flex;
+  padding: 48px 80px;
+  background: #f1e4ff;
+}
+
+.stepImage {
+  width: 96px;
+  min-width: 96px;
+  height: 96px;
+  background: #f4f5f7;
+  border-radius: 100px;
+  margin-right: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepImageInner {
+  width: 24px;
+  height: 24px;
+}
+
+.stepTitle {
+  font-size: 14px;
+  line-height: 18px;
+  padding-bottom: 8px;
+  font-weight: 800;
+}
+
+.stepText {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.ready {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 168px;
+}
+
+.readyTitle {
+  font-size: 72px;
+  line-height: 98px;
+}
+
+.readyText {
+  font-size: 36px;
+  line-height: 55px;
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.readyImage {
+  height: 300px;
+  width: 100%;
+  background: url('/images/Ellipse.png') center bottom no-repeat;
+}
+
+.readyImagePhone {
+  position: absolute;
+  background: url('/images/iPhone.png') left top no-repeat;
+  height: 300px;
+  width: 100%;
+  top: 25px;
+  left: calc(50% - 150px);
+}
+
+.readyImageWrapper {
+  margin-top: 150px;
+  height: 300px;
+  width: 100%;
+  position: relative;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background: #0b0d17;
+  height: 86px;
+  align-items: center;
+  padding: 0 50px;
+}
+
+.rights {
+  color: #d9dbe1;
+}
+
+.note {
+  padding: 0px 0 16px;
+  width: 400px;
+  font-size: 18px;
+  font-weight: 600;
 }
